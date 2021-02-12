@@ -1,0 +1,29 @@
+package zohotest;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author nrajagopal
+ */
+public class TestPrintText {
+    
+     public static void main(String arge[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String inputString = sc.next();
+        
+        int lengthofString = inputString.length();
+        int middleofString = lengthofString/2;
+        
+        for(int i = middleofString;i<=lengthofString;i++)
+        {
+            System.out.println(inputString.charAt(i));
+            for(int j=middleofString;j<=i;j++)
+            {
+                System.out.print(inputString.charAt(j+i));
+            }
+        }
+    }
+    
+}
