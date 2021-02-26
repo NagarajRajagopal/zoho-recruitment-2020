@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author nagaraj
+ * @author nrajagopal
  */
 public class TestPrintText {
     
@@ -18,20 +18,31 @@ public class TestPrintText {
         
         for(int i = middleofString;i<lengthofString+middleofString;i++)
         {
-            for(int j=middleofString;j<=i;j++)
+            
+            if(i<lengthofString)
             {
-                System.out.print(inputString.charAt(j)+" ");
-                if(middleofString>=i)
+                for(int j=middleofString;j<=i;j++)
                 {
-                    for(int k=0;k<middleofString;k++)
-                    {
-                        System.out.print(inputString.charAt(k));
-                    }
+                    System.out.print(" "+inputString.charAt(j));
                 }
+            
+            System.out.println();
             }
+        }
+        
+        for(int i = 0;i<middleofString;i++)
+        {
+            
+                for(int j=middleofString;j<lengthofString;j++)
+                {
+                    System.out.print(" "+inputString.charAt(j));
+                }
+                for(int j=0;j<=i;j++)
+                {
+                    System.out.print(" "+inputString.charAt(j));
+                }
             System.out.println();
         }
         
     }
-    
 }
